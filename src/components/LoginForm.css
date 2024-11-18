@@ -1,0 +1,56 @@
+/* Container styles */
+.container {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  height: vh; /* Container height */
+  font-family: Arial, sans-serif; /* Default font */
+}
+
+/* Form styles */
+.form {
+  width: 100%;
+  max-width: 320px; /* Form width */
+  text-align: center;
+}
+
+/* Heading styles */
+.heading {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* Input field group */
+.inputGroup {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Label styles */
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Input field styles */
+.input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Error message */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+.button {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}

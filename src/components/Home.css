@@ -1,0 +1,92 @@
+/* Home Page Styles */
+.home-container {
+  text-align: center;
+  margin-top: 80px;  /* Adjusted to fit the fixed navbar */
+  font-family: 'Arial', sans-serif; /* Clean, easy-to-read font */
+}
+
+.home-heading {
+  font-size: 40px;  /* Larger, more impactful heading */
+  color: #333;
+  font-weight: 700;  /* Bold font weight for emphasis */
+  margin-bottom: 20px;  /* Space between heading and message */
+  line-height: 1.2; /* Line height for better readability */
+}
+
+.home-message {
+  font-size: 22px;  /* Larger font for better readability */
+  color: #666;
+  margin-top: 20px;
+  line-height: 1.5; /* Increased line height for comfort in reading */
+}
+
+.home-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.home-button {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 18px;
+  background-color: #4CAF50;  /* More vibrant green */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* Slightly stronger shadow */
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.home-button:hover {
+  background-color: #45a049;
+  transform: translateY(-4px);  /* Lift effect */
+}
+
+.home-button:active {
+  transform: translateY(0);  /* Reset lift on click */
+}
+
+.home-button:focus {
+  outline: 3px solid #66bb6a;  /* Outline on focus for better accessibility */
+}
+
+/* Styles for the navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;  /* Dark background for the navbar */
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;  /* Ensures the navbar is always on top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);  /* Subtle shadow for depth */
+}
+
+.nav-button {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  margin-right: 30px;  /* Space between buttons */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #555;  /* Darker shade when hovering */
+  transform: scale(1.05);  /* Slight scale effect */
+}
+
+.nav-button:active {
+  transform: scale(1);  /* Reset scale on click */
+}
+
+.nav-button:focus {
+  outline: 3px solid #66bb6a;  /* Outline on focus for better accessibility */
+}
