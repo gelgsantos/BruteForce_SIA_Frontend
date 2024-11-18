@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import './RegisterForm.css'; // Import the external CSS file
 
 const RegisterForm = () => {
@@ -71,6 +73,12 @@ const RegisterForm = () => {
         <button type="submit" className="button">
           Register
         </button>
+
+        {/* Link to Login page */}
+        <div className="login-link">
+          <p>Already have an account? <Link to="/login">Log in here</Link></p>
+        </div>
+
       </form>
     </div>
   );

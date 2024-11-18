@@ -1,14 +1,19 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom"; // Import Navigate
+import { BrowserRouter as Router, Routes, Route, Link, Navigate, useNavigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import Home from "./components/Home";  // Import Home component
+import Home from "./components/Home";
 import UploadedFilesPage from "./components/UploadedFilesPage";
 import './App.css';
 
 const App = () => {
   const [showHomeDropdown, setShowHomeDropdown] = useState(false);
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+
+  const handleDropdownItemClick = (setDropdownState) => {
+    // Close the dropdown
+    setDropdownState(false);
+  };
 
   return (
     <Router>
@@ -25,15 +30,27 @@ const App = () => {
               </button>
               {showHomeDropdown && (
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/home">Home Page</Link>
-                  <Link className="dropdown-item" to="/uploaded-files">Uploaded Files</Link>
+                  <Link
+                    className="dropdown-item"
+                    to="/home"
+                    onClick={() => handleDropdownItemClick(setShowHomeDropdown)}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    to="/uploaded-files"
+                    onClick={() => handleDropdownItemClick(setShowHomeDropdown)}
+                  >
+                    Files
+                  </Link>
                 </div>
               )}
             </div>
           </div>
 
           <div className="navbar-right">
-            {/* Home Dropdown */}
+            {/* User Dropdown */}
             <div className="navbar-dropdown">
               <button
                 className="navbar-link dropdown-btn"
@@ -43,8 +60,27 @@ const App = () => {
               </button>
               {showUserDropdown && (
                 <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/Login">Log In</Link>
-                  <Link className="dropdown-item" to="/register">Register</Link>
+                  <Link
+                    className="dropdown-item"
+                    to="/login"
+                    onClick={() => handleDropdownItemClick(setShowUserDropdown)}
+                  >
+                    Log In
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    to="/register"
+                    onClick={() => handleDropdownItemClick(setShowUserDropdown)}
+                  >
+                    Register
+                  </Link>
+                  <Link
+                    className="dropdown-item"
+                    to="/login"
+                    onClick={() => handleDropdownItemClick(setShowUserDropdown)}
+                  >
+                    Log Out
+                  </Link>
                 </div>
               )}
             </div>

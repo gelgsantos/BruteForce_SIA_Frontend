@@ -3,100 +3,126 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: #f0f0f0; /* Light gray background */
-  font-family: 'Roboto', sans-serif;
-  padding: 0 10px;
-  transition: background-color 0.3s ease; /* Smooth background transition */
+  height: fit-content; /* Adjust height to fit the form */
+  width: 100%; /* Full width to keep centering intact */
+  margin: auto; /* Center vertically and horizontally */
+  padding: 20px; /* Add spacing around the form */
+  background-color: #f0f0f0; /* Light gray background */
+  font-family: 'Arial', sans-serif; /* Clean, easy-to-read font */
+  text-align: center;
 }
 
 /* Form styles */
 .form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  width: 100%;
-  max-width: 350px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Form hover animation */
+  background-color: #ffffff; /* White background for contrast */
+  padding: 30px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  max-width: 400px; /* Constrain width */
+  margin: auto; /* Center horizontally */
+  position: absolute; /* Allow precise positioning */
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust position to truly center */
+  transition: transform 0.3s, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hover effect on form */
 .form:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translate(-50%, -52%); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
+
 
 /* Heading styles */
 .heading {
-  margin-bottom: 20px;
-  font-size: 22px;
+  font-size: 28px; 
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
+  margin-bottom: 10px; /* Reduced spacing below heading */
+  line-height: 1.4; 
 }
 
 /* Input field group */
-.inputGroup {
-  margin-bottom: 15px;
-  text-align: left;
+.inputGroup:first-child {
+  margin-top: 0; /* Ensure no extra space at the top of the form */
 }
+
 
 /* Label styles */
 .label {
   display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #555;
-  font-weight: 600;
+  font-size: 16px;
+  color: #555; /* Subtle gray for labels */
+  font-weight: 600; /* Slightly bold text */
+  margin-bottom: 8px;
 }
 
 /* Input field styles */
 .input {
   width: 100%;
-  padding: 10px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  font-size: 14px;
-  outline: none;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd; /* Neutral border color */
+  border-radius: 8px; /* Rounded corners for inputs */
   background-color: #fafafa; /* Light background for inputs */
-  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.3s, background-color 0.3s ease; /* Smooth transitions */
 }
 
-/* Input focus styles */
 .input:focus {
-  border-color: #ff80ab; /* Pink border on focus */
-  background-color: #ffe6f0; /* Light pink background */
+  border-color: #66bb6a; /* Vibrant green on focus */
+  background-color: #f0fff0; /* Light green background */
 }
 
-/* Error message */
+/* Error message styles */
 .error {
-  color: #ff4d4d;
-  font-size: 12px;
+  color: #ff4d4d; /* Red for error text */
+  font-size: 14px;
+  margin-top: -10px;
   margin-bottom: 15px;
+  text-align: left;
 }
 
 /* Button styles */
 .button {
+  display: inline-block;
   width: 100%;
-  padding: 12px;
-  background-color: #ff80ab; /* Pink background */
-  color: #fff;
+  padding: 14px;
+  font-size: 18px; /* Readable font size */
+  background-color: #4CAF50; /* Vibrant green */
+  color: white;
+  text-decoration: none; /* No underline */
   border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Button hover and click animation */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+  font-weight: 600; /* Slightly bold text */
+  transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transitions */
 }
 
-/* Button hover effect */
 .button:hover {
-  background-color: #ff4d94; /* Darker pink for hover */
-  transform: translateY(-2px); /* Button lift effect */
+  background-color: #45a049; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect */
 }
 
-/* Button active effect */
 .button:active {
   transform: translateY(0); /* Reset lift on click */
+}
+
+.button:focus {
+  outline: 3px solid #66bb6a; /* Accessibility focus outline */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
 }

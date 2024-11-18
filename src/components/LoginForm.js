@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import './LoginForm.css'; // Import the external CSS file
 
 const LoginForm = () => {
@@ -58,6 +59,11 @@ const LoginForm = () => {
         <button type="submit" className="button">
           Login
         </button>
+
+        {/* Link to Register page */}
+        <div className="register-link">
+          <p>Don't have an account? <Link to="/register">Register here</Link></p>
+        </div>
       </form>
     </div>
   );

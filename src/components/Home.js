@@ -50,10 +50,7 @@ const Home = () => {
           </form>
           {message && <p>{message}</p>}
         </div>
-
-        <div className="home-buttons">
-          <Link to="/login" className="home-button">Logout</Link>
-        </div>
+        
       </div>
     </div>
   );
